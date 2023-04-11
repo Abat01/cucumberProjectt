@@ -22,13 +22,13 @@ public class amazonStepDefinitions {
 
     @When("nutella icin arama yapar")
     public void nutella_icin_arama_yapar() {
-       amazonPage.aramaKutusu.sendKeys("Nutella"+ Keys.ENTER);
+       amazonPage.aramaKutusu.sendKeys("Tablet"+ Keys.ENTER);
 
     }
     @Then("sonucun nutella icerdigini test eder")
     public void sonucun_nutella_icerdigini_test_eder() {
 
-        Assert.assertTrue(amazonPage.sonucYazisiElementi.getText().contains("Nutella"));
+        Assert.assertTrue(amazonPage.sonucYazisiElementi.getText().contains("Tablet"));
 
     }
     @Then("sayfayi kapatir")
@@ -47,11 +47,11 @@ public class amazonStepDefinitions {
     @When("ipad icin arama yapar")
     public void ipad_icin_arama_yapar() {
 
-        amazonPage.aramaKutusu.sendKeys("ipad"+ Keys.ENTER);
+        amazonPage.aramaKutusu.sendKeys("Android Phone"+ Keys.ENTER);
     }
     @Then("sonucun ipad icerdigini test eder")
     public void sonucun_ipad_icerdigini_test_eder() {
-        Assert.assertTrue(amazonPage.sonucYazisiElementi.getText().contains("ipad"));
+        Assert.assertTrue(amazonPage.sonucYazisiElementi.getText().contains("Android Phone"));
     }
 
     @And("{string} icin arama yapar")
